@@ -16,14 +16,16 @@ searchForm.addEventListener('submit', async (event) => {
 
     try {
         
-        const response = await axios.get<{ data: PokemonInfo[] }>(`https://api.pokemontcg.io/v2/cards/xy1-1`, {
+        const response = await axios.get<{ data: PokemonInfo[] }>(`https://api.pokemontcg.io/v2/cards`, {
             params: {
                 q: `name:${searchText}`,
-                pagesize: 10,
+                pageSize: 10,
             },
         });
         const pokemonList = response.data.data;
         console.log(pokemonList)
+
+        displayPokemon(pokemonList)
 
     } catch(error) {
         console.error('Could not find:', error)
@@ -31,3 +33,17 @@ searchForm.addEventListener('submit', async (event) => {
 });
 }
 
+const displayPokemon = (pokemonList: PokemonInfo[]) => {
+const resultsContainer = document.getElementById('searchResults') as HTMLDivElement;
+
+if(resultsContainer){
+    resultsContainer.innerHTML = '';
+    pokemonList.forEach((pokemon) => {
+        const pokemonImage = document.createElement('img');
+        pokemonImage.src = pokemon.images.small;
+        pokemonImage.alt = 'Picture of Pokemon';
+
+        resultsContainer.appendChild(pokemonImage);
+    });
+}
+};
