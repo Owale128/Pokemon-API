@@ -5,10 +5,19 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/sass/main.scss">
-    <title>Vite + TS</title>
+    <title>Pokemon Cards</title>
   </head>
   <body>
-    <div id="app"></div>
+
+    <div id="searchContainer">
+      <form id="searchForm">
+        <label for="searchText">Search For Pokemon</label>
+        <input type="text" name="searchText" id="searchText">
+      </form>
+    </div>
+
+    <div id="searchResults"></div>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
