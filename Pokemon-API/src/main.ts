@@ -7,6 +7,7 @@ images:{
     };
 }
 
+const searchContainer = document.getElementById('searchContainer') as HTMLDivElement;
 const searchForm = document.getElementById('searchForm') as HTMLFormElement
 if(searchForm) {
 searchForm.addEventListener('submit', async (event) => {
@@ -27,6 +28,11 @@ searchForm.addEventListener('submit', async (event) => {
 
         displayPokemon(pokemonList)
 
+        const margin = -40;
+        const rect = searchContainer.getBoundingClientRect();
+        searchContainer.style.transition = 'transform 0.5s ease';
+        searchContainer.style.transform = `translate(-${rect.left + margin}px, -${rect.top + margin}px)`;
+
     } catch(error) {
         console.error('Could not find:', error)
     }
@@ -40,6 +46,7 @@ if(resultsContainer){
     resultsContainer.innerHTML = '';
     pokemonList.forEach((pokemon) => {
         const pokemonImage = document.createElement('img');
+        pokemonImage.className = 'pokemonImg';
         pokemonImage.src = pokemon.images.small;
         pokemonImage.alt = 'Picture of Pokemon';
 

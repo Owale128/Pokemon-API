@@ -45,3 +45,21 @@ body {
     font-size: 1rem;
     width: 10rem;
 }
+
+.searchResults {
+    gap: 2rem; 
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -5rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+}
+
+.pokemonImg {
+    transition: transform 0.6s ease;
+
+    &:hover {
+        transform: scale(1.16);
+    }
+}
