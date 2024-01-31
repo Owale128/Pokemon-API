@@ -7,9 +7,10 @@ images:{
     };
 }
 
+const resultsContainer = document.getElementById('searchResults') as HTMLDivElement;
 
 const searchForm = document.getElementById('searchForm') as HTMLFormElement
-if(searchForm) {
+if(searchForm && resultsContainer) {
 searchForm.addEventListener('submit', async (event) => {
 
     event.preventDefault()
@@ -28,6 +29,9 @@ searchForm.addEventListener('submit', async (event) => {
 
         displayPokemon(pokemonList)
 
+        setTimeout(() => {
+            resultsContainer.scrollIntoView({ behavior: 'smooth'});
+          }, 150);
 
     } catch(error) {
         console.error('Could not find:', error)
