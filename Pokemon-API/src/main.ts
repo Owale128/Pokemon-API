@@ -30,7 +30,7 @@ searchForm.addEventListener('submit', async (event) => {
 
         const margin = -40;
         const rect = searchContainer.getBoundingClientRect();
-        searchContainer.style.transition = 'transform 0.5s ease';
+        searchContainer.style.transition = 'transform 1s ease';
         searchContainer.style.transform = `translate(-${rect.left + margin}px, -${rect.top + margin}px)`;
 
     } catch(error) {
