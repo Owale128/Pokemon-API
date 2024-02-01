@@ -35,11 +35,11 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-var axios_1 = import("axios");
-var displayPokemon_1 = import("../src/functions/displayPokemon");
-var displayPokemon_2 = import("../src/functions/displayPokemon");
+import axios from "axios";
+import { displayPokemon } from "../src/functions/displayPokemon";
+
 var searchForm = document.getElementById('searchForm');
-if (searchForm && displayPokemon_2.resultsContainer) {
+if (searchForm && displayPokemon.resultsContainer) {
     searchForm.addEventListener('submit', function (event) { return __awaiter(void 0, void 0, void 0, function () {
         var searchText, response, pokemonList, error_1;
         return __generator(this, function (_a) {
@@ -50,7 +50,7 @@ if (searchForm && displayPokemon_2.resultsContainer) {
                     _a.label = 1;
                 case 1:
                     _a.trys.push([1, 3, , 4]);
-                    return [4 /*yield*/, axios_1.default.get("https://api.pokemontcg.io/v2/cards", {
+                    return [4 /*yield*/, axios.defaults.get("https://api.pokemontcg.io/v2/cards", {
                             params: {
                                 q: "name:".concat(searchText),
                                 pageSize: 10,
@@ -60,9 +60,9 @@ if (searchForm && displayPokemon_2.resultsContainer) {
                     response = _a.sent();
                     pokemonList = response.data.data;
                     console.log(pokemonList);
-                    (0, displayPokemon_1.displayPokemon)(pokemonList);
+                    (0, displayPokemon.displayPokemon)(pokemonList);
                     setTimeout(function () {
-                        displayPokemon_2.resultsContainer.scrollIntoView({ behavior: 'smooth' });
+                        displayPokemon.resultsContainer.scrollIntoView({ behavior: 'smooth' });
                     }, 135);
                     return [3 /*break*/, 4];
                 case 3:
