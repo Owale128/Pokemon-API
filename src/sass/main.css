@@ -30,7 +30,7 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   animation: rotateAnimation 2s linear;
-  background-image: url("/src/images/Pokemon logo.png");
+  background-image: url("../images/Pokemon logo.png");
 }
 @media only screen and (max-width: 47.9rem) {
   .pokeLogo {
@@ -67,7 +67,7 @@ body {
   border: 0.01rem solid black;
   animation: fadeInUp 1.5s ease-in-out;
   box-shadow: 0.1rem 0 0.3rem rgba(0, 0, 0, 0.1);
-  background: url("/src/images/Pikachu.jpg") no-repeat top/cover;
+  background: url("../images/Pikachu.jpg") no-repeat top/cover;
 }
 @media only screen and (max-width: 47.9rem) {
   .searchContainer {
