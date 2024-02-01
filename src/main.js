@@ -36,7 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 
-import { displayPokemon } from "../src/functions/displayPokemon";
+import { displayPokemon } from "../src/functions/displayPokemon.js";
 var searchForm = document.getElementById('searchForm');
 if (searchForm && displayPokemon.resultsContainer) {
     searchForm.addEventListener('submit', function (event) {
