@@ -1,4 +1,5 @@
 "use strict";
+exports.resultsContainer = exports.displayPokemon = void 0;
 
 const displayPokemon = (pokemonList) => {
     var resultsContainer = document.getElementById('searchResults');
@@ -19,6 +20,9 @@ const displayPokemon = (pokemonList) => {
         });
     }
 };
+
+exports.displayPokemon = displayPokemon;
+exports.resultsContainer = document.getElementById('searchResults');
 const _displayPokemon = displayPokemon;
 export { _displayPokemon as displayPokemon };
 export const resultsContainer = document.getElementById('searchResults');
