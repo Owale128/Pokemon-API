@@ -1,13 +1,8 @@
 import axios from "axios";
+import { PokemonInfo } from "./interface/Interface";
+import { displayPokemon } from "./functions/displayPokemon";
+import { resultsContainer } from "./functions/displayPokemon";
 
-
-interface PokemonInfo {
-images:{
-    small: string;
-    };
-}
-
-const resultsContainer = document.getElementById('searchResults') as HTMLDivElement;
 
 const searchForm = document.getElementById('searchForm') as HTMLFormElement
 if(searchForm && resultsContainer) {
@@ -39,25 +34,3 @@ searchForm.addEventListener('submit', async (event) => {
 });
 }
 
-const displayPokemon = (pokemonList: PokemonInfo[]) => {
-const resultsContainer = document.getElementById('searchResults') as HTMLDivElement;
-
-if(resultsContainer){
-    resultsContainer.innerHTML = '';
-    pokemonList.forEach((pokemon) => {
-        const pokemonImage = document.createElement('img');
-        pokemonImage.className = 'pokemonImg';
-        pokemonImage.src = pokemon.images.small;
-        pokemonImage.alt = 'Picture of Pokemon';
-
-        pokemonImage.addEventListener('click', () => {
-            pokemonImage.classList.add('holoEffect');
-            setTimeout(() => {
-                pokemonImage.classList.remove('holoEffect');
-            }, 1000);
-        });
-        
-        resultsContainer.appendChild(pokemonImage);
-    });
-}
-};
