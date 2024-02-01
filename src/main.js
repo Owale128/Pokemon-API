@@ -36,8 +36,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 var axios_1 = import("axios");
-var displayPokemon_1 = import("./functions/displayPokemon");
-var displayPokemon_2 = import("./functions/displayPokemon");
+var displayPokemon_1 = import("../src/functions/displayPokemon");
+var displayPokemon_2 = import("../src/functions/displayPokemon");
 var searchForm = document.getElementById('searchForm');
 if (searchForm && displayPokemon_2.resultsContainer) {
     searchForm.addEventListener('submit', function (event) { return __awaiter(void 0, void 0, void 0, function () {
