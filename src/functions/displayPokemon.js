@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+// Object.defineProperty(exports, "__esModule", { value: true });
 exports.resultsContainer = exports.displayPokemon = void 0;
 var displayPokemon = function (pokemonList) {
     var resultsContainer = document.getElementById('searchResults');
