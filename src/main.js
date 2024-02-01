@@ -9,8 +9,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    var _ = { label: 0, sent: function () { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function () { return this; }), g;
     function verb(n) { return function (v) { return step([n, v]); }; }
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
@@ -35,41 +35,44 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+import axios from "./node_modules/axios/dist/axios.min.mjs";
 
 import { displayPokemon } from "../src/functions/displayPokemon";
 var searchForm = document.getElementById('searchForm');
 if (searchForm && displayPokemon.resultsContainer) {
-    searchForm.addEventListener('submit', function (event) { return __awaiter(void 0, void 0, void 0, function () {
-        var searchText, response, pokemonList, error_1;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    event.preventDefault();
-                    searchText = document.getElementById('searchText').value;
-                    _a.label = 1;
-                case 1:
-                    _a.trys.push([1, 3, , 4]);
-                    return [4 /*yield*/, axios.get("https://api.pokemontcg.io/v2/cards", {
+    searchForm.addEventListener('submit', function (event) {
+        return __awaiter(void 0, void 0, void 0, function () {
+            var searchText, response, pokemonList, error_1;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        event.preventDefault();
+                        searchText = document.getElementById('searchText').value;
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 3, , 4]);
+                        return [4 /*yield*/, axios.get("https://api.pokemontcg.io/v2/cards", {
                             params: {
                                 q: "name:".concat(searchText),
                                 pageSize: 10,
                             },
                         })];
-                case 2:
-                    response = _a.sent();
-                    pokemonList = response.data.data;
-                    console.log(pokemonList);
-                    (0, displayPokemon.displayPokemon)(pokemonList);
-                    setTimeout(function () {
-                        displayPokemon.resultsContainer.scrollIntoView({ behavior: 'smooth' });
-                    }, 135);
-                    return [3 /*break*/, 4];
-                case 3:
-                    error_1 = _a.sent();
-                    console.error('Could not find:', error_1);
-                    return [3 /*break*/, 4];
-                case 4: return [2 /*return*/];
-            }
+                    case 2:
+                        response = _a.sent();
+                        pokemonList = response.data.data;
+                        console.log(pokemonList);
+                        (0, displayPokemon.displayPokemon)(pokemonList);
+                        setTimeout(function () {
+                            displayPokemon.resultsContainer.scrollIntoView({ behavior: 'smooth' });
+                        }, 135);
+                        return [3 /*break*/, 4];
+                    case 3:
+                        error_1 = _a.sent();
+                        console.error('Could not find:', error_1);
+                        return [3 /*break*/, 4];
+                    case 4: return [2 /*return*/];
+                }
+            });
         });
-    }); });
+    });
 }
