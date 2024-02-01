@@ -31,7 +31,7 @@ searchForm.addEventListener('submit', async (event) => {
 
         setTimeout(() => {
             resultsContainer.scrollIntoView({ behavior: 'smooth'});
-          }, 150);
+          }, 135);
 
     } catch(error) {
         console.error('Could not find:', error)
