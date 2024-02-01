@@ -35,10 +35,10 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var axios_1 = require("axios");
-var displayPokemon_1 = require("./functions/displayPokemon");
-var displayPokemon_2 = require("./functions/displayPokemon");
+// Object.defineProperty(exports, "__esModule", { value: true });
+var axios_1 = import("axios");
+var displayPokemon_1 = import("./functions/displayPokemon");
+var displayPokemon_2 = import("./functions/displayPokemon");
 var searchForm = document.getElementById('searchForm');
 if (searchForm && displayPokemon_2.resultsContainer) {
     searchForm.addEventListener('submit', function (event) { return __awaiter(void 0, void 0, void 0, function () {
