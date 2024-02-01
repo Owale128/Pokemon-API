@@ -35,9 +35,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-import axios from "axios";
-import { displayPokemon } from "../src/functions/displayPokemon";
 
+import { displayPokemon } from "../src/functions/displayPokemon";
 var searchForm = document.getElementById('searchForm');
 if (searchForm && displayPokemon.resultsContainer) {
     searchForm.addEventListener('submit', function (event) { return __awaiter(void 0, void 0, void 0, function () {
@@ -50,7 +49,7 @@ if (searchForm && displayPokemon.resultsContainer) {
                     _a.label = 1;
                 case 1:
                     _a.trys.push([1, 3, , 4]);
-                    return [4 /*yield*/, axios.defaults.get("https://api.pokemontcg.io/v2/cards", {
+                    return [4 /*yield*/, axios.get("https://api.pokemontcg.io/v2/cards", {
                             params: {
                                 q: "name:".concat(searchText),
                                 pageSize: 10,
