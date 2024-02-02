@@ -36,6 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 
+
 import { displayPokemon } from "../src/functions/displayPokemon.js";
 var searchForm = document.getElementById('searchForm');
 if (searchForm && displayPokemon.resultsContainer) {
@@ -59,11 +60,11 @@ if (searchForm && displayPokemon.resultsContainer) {
                     case 2:
                         response = _a.sent();
                         pokemonList = response.data.data;
-                        console.log(pokemonList);
+                        console.log(pokemonList)
                         (0, displayPokemon.displayPokemon)(pokemonList);
                         setTimeout(function () {
                             displayPokemon.resultsContainer.scrollIntoView({ behavior: 'smooth' });
-                        }, 135);
+                        }, 1500);
                         return [3 /*break*/, 4];
                     case 3:
                         error_1 = _a.sent();

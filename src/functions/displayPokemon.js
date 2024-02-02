@@ -1,12 +1,13 @@
 "use strict";
-exports.resultsContainer = exports.displayPokemon = void 0;
 
-const displayPokemon = (pokemonList) => {
-    var resultsContainer = document.getElementById('searchResults');
+export const displayPokemon = (pokemonList) => {
+ const resultsContainer = document.getElementById('searchResults');
     if (resultsContainer) {
         resultsContainer.innerHTML = '';
         pokemonList.forEach(function (pokemon) {
+            console.log(pokemon)
             var pokemonImage = document.createElement('img');
+            console.log(pokemonImage)
             pokemonImage.className = 'pokemonImg';
             pokemonImage.src = pokemon.images.small;
             pokemonImage.alt = 'Picture of Pokemon';
@@ -21,8 +22,4 @@ const displayPokemon = (pokemonList) => {
     }
 };
 
-exports.displayPokemon = displayPokemon;
-exports.resultsContainer = document.getElementById('searchResults');
-const _displayPokemon = displayPokemon;
-export { _displayPokemon as displayPokemon };
 export const resultsContainer = document.getElementById('searchResults');
