@@ -37,9 +37,14 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 
 
-import { displayPokemon } from "../src/functions/displayPokemon.js";
+
+
+import { displayPokemon} from '../src/functions/displayPokemon.js';
+import * as displayPokemonModule from '../src/functions/displayPokemon.js';
+console.log(displayPokemonModule.resultsContainer);
+
 var searchForm = document.getElementById('searchForm');
-if (searchForm && displayPokemon.resultsContainer) {
+if (searchForm && displayPokemonModule.resultsContainer) {
     searchForm.addEventListener('submit', function (event) {
         return __awaiter(void 0, void 0, void 0, function () {
             var searchText, response, pokemonList, error_1;
@@ -60,11 +65,10 @@ if (searchForm && displayPokemon.resultsContainer) {
                     case 2:
                         response = _a.sent();
                         pokemonList = response.data.data;
-                        console.log(pokemonList)
-                        (0, displayPokemon.displayPokemon)(pokemonList);
+                        displayPokemon(pokemonList);
                         setTimeout(function () {
-                            displayPokemon.resultsContainer.scrollIntoView({ behavior: 'smooth' });
-                        }, 1500);
+                            displayPokemonModule.resultsContainer.scrollIntoView({ behavior: 'smooth' });
+                        }, 1000);
                         return [3 /*break*/, 4];
                     case 3:
                         error_1 = _a.sent();

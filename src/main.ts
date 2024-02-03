@@ -1,7 +1,7 @@
 import axios from "axios";
-import { PokemonInfo } from "./interface/Interface";
-import { displayPokemon } from "./functions/displayPokemon";
-import { resultsContainer } from "./functions/displayPokemon";
+import { PokemonInfo } from "../src/interface/Interface";
+import { displayPokemon } from "../src/functions/displayPokemon";
+import { resultsContainer } from "../src/functions/displayPokemon";
 
 
 const searchForm = document.getElementById('searchForm') as HTMLFormElement
