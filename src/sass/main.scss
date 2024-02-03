@@ -128,10 +128,8 @@ body {
     margin: 16rem 0;
     margin-bottom: 2rem;
     justify-content: center;
-   
-    @include mobile {
-      
-    }
+
+    @include mobile {}
 }
 
 .pokemonImg {
@@ -147,8 +145,7 @@ body {
     }
 
     @include mobile {
-        width: 10rem;
-        gap: 0.5rem;
+        width: 9.5rem;
     }
 
     @include tablet {

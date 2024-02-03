@@ -130,8 +130,7 @@ body {
 }
 @media only screen and (max-width: 47.9rem) {
   .pokemonImg {
-    width: 10rem;
-    gap: 0.5rem;
+    width: 9.5rem;
   }
 }
 @media only screen and (min-width: 48rem) and (max-width: 63.9rem) {
