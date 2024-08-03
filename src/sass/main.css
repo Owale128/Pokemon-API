@@ -131,8 +131,9 @@ body {
 }
 
 .pokemonImg {
-  transition: transform 0.6s ease;
   width: 14rem;
+  cursor: pointer;
+  transition: transform 0.6s ease;
 }
 .pokemonImg:hover {
   transform: scale(1.16);
@@ -172,4 +173,6 @@ footer {
   border-radius: 1rem;
   padding: 1rem;
   border: 0.01rem solid black;
+  background-color: black;
+  color: white;
 }/*# sourceMappingURL=main.css.map */
