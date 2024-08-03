@@ -1,6 +1,6 @@
 # Pokemon-API! 😃
 
-Det här projektet är en webbapplikation för att söka efter Pokémon-kort från Pokémon TCG-databasen. Användare kan söka efter Pokémon-kort via ett formulär, och resultaten visas med bilder och animationer. Applikationen använder HTML, CSS, och JavaScript/TypeScript. En asynkron begäran görs till Pokémon TCG API med Axios, och sökresultaten visas i ett stiliserat rutnät. Bilderna har en hover-effekt och en kort animation vid klick.
+This project is a web application to search for Pokémon cards from the Pokémon Trading Card Game database. Users can search for Pokemon cards via a form, and display results with images and animations. The application uses HTML, CSS and JavaScript/TypeScript. An asynchronous request is made to the Pokémon TCG API using Axios, and the search results display in a stylized grid.
 
 You can visit the page at: https://owale128.github.io/Pokemon-API/
 
